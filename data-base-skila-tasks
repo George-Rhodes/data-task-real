@@ -1,0 +1,14 @@
+1.SELECT * from actor;
+2.select * from actor where first_name = 'John';
+3.select * from actor where last_name = 'Neeson';
+4.select * from actor where actor_id like '%0';
+5.select description from film where film_id = 100;
+6. select * from film where rating = 'R';
+7. select * from film where rating != 'R';
+8.select * from film order by lenghth asc limit 10;
+9.select * from film order by length desc;
+10.select * from film where special_features = 'Deleted Scenes';
+11.select count(last_name), last_name from actor group by last_name having count(last_name) < 2 order by last_name desc;
+12.select count(last_name), last_name from actor group by last_name having count(last_name) >= 2 order by count(last_name) desc;
+13select first_name, last_name, count(title) from actor INNER JOIN film_actor ON film_actor.actor_id = actor.actor_id INNER JOIN film ON film.film_id = film_actor.film_id group by actor.first_name, actor.last_name order by count(title) desc limit 1;
+14
